@@ -14,6 +14,13 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "tabHero.showStats",
+        "title": "Show Tab Hero Stats",
+        "category": "Tab Hero"
+      }
+    ],
     "configuration": {
       "title": "Tab Hero",
       "properties": {
