@@ -1,0 +1,97 @@
+{
+  "name": "tab-hero",
+  "displayName": "Tab Hero",
+  "description": "An entertainment extension that adds fun score animations when tab completions are accepted",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Tab Hero",
+      "properties": {
+        "tabHero.scoreCalculationMethod": {
+          "type": "string",
+          "enum": [
+            "quality",
+            "fixed",
+            "random"
+          ],
+          "default": "quality",
+          "description": "Method for calculating scores. 'quality' bases score on completion length/complexity, 'fixed' uses a fixed value, 'random' uses random values within range."
+        },
+        "tabHero.fixedScore": {
+          "type": "number",
+          "default": 10,
+          "description": "Fixed score value to use when scoreCalculationMethod is 'fixed'"
+        },
+        "tabHero.baseScorePerChar": {
+          "type": "number",
+          "default": 0.5,
+          "description": "Base score per character when using quality-based scoring"
+        },
+        "tabHero.minScore": {
+          "type": "number",
+          "default": 1,
+          "description": "Minimum score value"
+        },
+        "tabHero.maxScore": {
+          "type": "number",
+          "default": 1000,
+          "description": "Maximum score value"
+        },
+        "tabHero.randomMinScore": {
+          "type": "number",
+          "default": 5,
+          "description": "Minimum score for random calculation method"
+        },
+        "tabHero.randomMaxScore": {
+          "type": "number",
+          "default": 100,
+          "description": "Maximum score for random calculation method"
+        },
+        "tabHero.animationDuration": {
+          "type": "number",
+          "default": 1500,
+          "description": "Animation duration in milliseconds"
+        },
+        "tabHero.animationStyle": {
+          "type": "string",
+          "enum": [
+            "floating",
+            "fade"
+          ],
+          "default": "floating",
+          "description": "Animation style for score display"
+        },
+        "tabHero.scoreColor": {
+          "type": "string",
+          "default": "#4CAF50",
+          "description": "Color for the score text"
+        },
+        "tabHero.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable Tab Hero animations"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  }
+}
