@@ -2,6 +2,7 @@ import * as vscode from "vscode";
 
 export interface TabHeroConfig {
   enabled: boolean;
+  showInlineScoreAnimation: boolean;
   scoreCalculationMethod: "quality" | "fixed" | "random";
   fixedScore: number;
   baseScorePerChar: number;
@@ -20,6 +21,10 @@ export function getConfig(): TabHeroConfig {
 
   return {
     enabled: config.get<boolean>("enabled", true),
+    showInlineScoreAnimation: config.get<boolean>(
+      "showInlineScoreAnimation",
+      true
+    ),
     scoreCalculationMethod: config.get<"quality" | "fixed" | "random">(
       "scoreCalculationMethod",
       "quality"

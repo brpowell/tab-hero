@@ -19,6 +19,11 @@
         "command": "tabHero.showStats",
         "title": "Show Stats",
         "category": "Tab Hero"
+      },
+      {
+        "command": "tabHero.openSettings",
+        "title": "Open Settings",
+        "category": "Tab Hero"
       }
     ],
     "configuration": {
@@ -91,6 +96,11 @@
           "type": "boolean",
           "default": true,
           "description": "Enable/disable Tab Hero animations"
+        },
+        "tabHero.showInlineScoreAnimation": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show/hide the inline score animation that appears next to completed code"
         }
       }
     }

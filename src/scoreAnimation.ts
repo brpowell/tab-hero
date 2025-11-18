@@ -27,13 +27,10 @@ export class ScoreAnimation {
     this.config = getConfig();
   }
 
-  /**
-   * Show a score animation at the given position
-   */
   showScore(options: AnimationOptions): void {
     this.config = getConfig(); // Refresh config
 
-    if (!this.config.enabled) {
+    if (!this.config.enabled || !this.config.showInlineScoreAnimation) {
       return;
     }
 
