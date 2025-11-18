@@ -17,7 +17,7 @@
     "commands": [
       {
         "command": "tabHero.showStats",
-        "title": "Show Tab Hero Stats",
+        "title": "Show Stats",
         "category": "Tab Hero"
       }
     ],

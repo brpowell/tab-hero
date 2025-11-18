@@ -91,9 +91,15 @@ export function activate(context: vscode.ExtensionContext) {
     updateStatusBar(sessionStats);
   }
 
-  vscode.window.showInformationMessage(
-    "Tab Hero is ready! Accept tab completions to see score animations."
+  const setupMessageShown = context.globalState.get<boolean>(
+    "tabHero.setupMessageShown"
   );
+  if (!setupMessageShown) {
+    vscode.window.showInformationMessage(
+      "Tab Hero is ready! Accept tab completions to rack up points. Check your stats with the 'Show Stats' command, or glance at the status bar for your session score."
+    );
+    context.globalState.update("tabHero.setupMessageShown", true);
+  }
 }
 
 function handleCompletionAccepted(event: {

@@ -10,10 +10,6 @@ export type CompletionAcceptanceCallback = (
   event: CompletionAcceptanceEvent
 ) => void;
 
-/**
- * Detects when tab completions are accepted using VS Code's Inline Completion API.
- * This is the most standard and non-hacky way to detect completion acceptance.
- */
 export class CompletionDetector implements vscode.InlineCompletionItemProvider {
   private callbacks: CompletionAcceptanceCallback[] = [];
   private lastDocumentVersion: Map<string, number> = new Map();
@@ -102,9 +98,6 @@ export class CompletionDetector implements vscode.InlineCompletionItemProvider {
     this.lastDocumentText.set(docKey, e.document.getText());
   }
 
-  /**
-   * Notify all registered callbacks about a completion acceptance
-   */
   private notifyCallbacks(event: CompletionAcceptanceEvent) {
     for (const callback of this.callbacks) {
       try {
