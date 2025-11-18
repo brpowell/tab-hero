@@ -1,6 +1,6 @@
-# Tab Hero
+# ⇥ Tab Hero
 
-A VS Code extension that adds score animations when tab completions are accepted 🎮.
+A pointless VS Code extension that tracks tab completion score with animations and a stats dashboard.
 
 ## Features
 
@@ -35,6 +35,8 @@ You can customize Tab Hero through VS Code settings:
 - `tabHero.animationDuration`: Animation duration in milliseconds (default: 1500)
 - `tabHero.animationStyle`: Animation style - `floating` (default) or `fade` (Note: Currently both styles use fade-out animation)
 - `tabHero.scoreColor`: Color for score text (default: "#4CAF50")
+- `tabHero.scoreDecoration`: Emoji or symbol shown with score (default: "🎯")
+- `tabHero.showInlineScoreAnimation`: Enable/disable inline score animations (default: true)
 - `tabHero.enabled`: Enable/disable Tab Hero (default: true)
 
 ## Installation
@@ -56,18 +58,7 @@ npm run compile
 npm run watch
 ```
 
-## Building for Distribution
 
-```bash
-npm install -g @vscode/vsce
-
-vsce package
-```
-
-## Requirements
-
-- VS Code 1.74.0 or higher
-- Node.js 16.x or higher
 
 ## License
 

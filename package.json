@@ -1,11 +1,37 @@
 {
   "name": "tab-hero",
   "displayName": "Tab Hero",
-  "description": "An entertainment extension that adds fun score animations when tab completions are accepted",
-  "version": "0.0.1",
+  "description": "Tab-complete your way to glory.",
+  "version": "1.0.0",
+  "publisher": "ponchopowell",
+  "author": {
+    "name": "Bryan Powell"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brpowell/tab-hero.git"
+  },
+  "homepage": "https://github.com/brpowell/tab-hero#readme",
+  "bugs": {
+    "url": "https://github.com/brpowell/tab-hero/issues"
+  },
+  "keywords": [
+    "tab",
+    "completion",
+    "autocomplete",
+    "inline-completion",
+    "gamification",
+    "productivity",
+    "fun",
+    "score",
+    "stats",
+    "animation"
+  ],
   "engines": {
     "vscode": "^1.74.0"
   },
+  "icon": "icon.png",
   "categories": [
     "Other"
   ],
@@ -106,13 +132,14 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:package": "npm run compile && vsce package",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
-    "@types/vscode": "^1.74.0",
     "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@vscode/vsce": "^3.7.0",
     "typescript": "^4.9.4"
   }
 }
