@@ -12,6 +12,7 @@ export interface TabHeroConfig {
   animationDuration: number;
   animationStyle: "floating" | "fade";
   scoreColor: string;
+  scoreDecoration: string;
 }
 
 export function getConfig(): TabHeroConfig {
@@ -35,6 +36,7 @@ export function getConfig(): TabHeroConfig {
       "floating"
     ),
     scoreColor: config.get<string>("scoreColor", "#4CAF50"),
+    scoreDecoration: config.get<string>("scoreDecoration", "🎯"),
   };
 }
 

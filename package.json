@@ -65,16 +65,20 @@
         "tabHero.animationStyle": {
           "type": "string",
           "enum": [
-            "floating",
             "fade"
           ],
-          "default": "floating",
+          "default": "fade",
           "description": "Animation style for score display"
         },
         "tabHero.scoreColor": {
           "type": "string",
           "default": "#4CAF50",
           "description": "Color for the score text"
+        },
+        "tabHero.scoreDecoration": {
+          "type": "string",
+          "default": "🎯",
+          "description": "Emoji or character displayed next to the score"
         },
         "tabHero.enabled": {
           "type": "boolean",

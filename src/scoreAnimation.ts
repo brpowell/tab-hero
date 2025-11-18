@@ -135,7 +135,7 @@ export class ScoreAnimation {
       animation.range.end.character
     );
 
-    const displayText = `🎯 ${animation.scoreText}`;
+    const displayText = `${this.config.scoreDecoration} ${animation.scoreText}`;
 
     const vibrantColor = this.makeColorVibrant(baseColor, opacity);
 
