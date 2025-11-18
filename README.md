@@ -1,13 +1,12 @@
 # Tab Hero
 
-An entertainment VS Code extension that adds fun score animations when tab completions are accepted! 🎮
+A VS Code extension that adds score animations when tab completions are accepted 🎮.
 
 ## Features
 
-- **Score Animations**: See exciting score popups (+5, +100, etc.) when you accept tab completions
+- **Score Animations**: See score popups (🎯 +5, 🎯 +100, etc.) when you accept tab completions
 - **Quality-Based Scoring**: Scores are calculated based on completion length and complexity
 - **Customizable**: Configure score values, colors, animation styles, and more
-- **Smooth Animations**: Beautiful floating text animations that fade out gracefully
 
 ## How It Works
 
@@ -34,7 +33,7 @@ You can customize Tab Hero through VS Code settings:
 ### Animation
 
 - `tabHero.animationDuration`: Animation duration in milliseconds (default: 1500)
-- `tabHero.animationStyle`: Animation style - `floating` (default) or `fade`
+- `tabHero.animationStyle`: Animation style - `floating` (default) or `fade` (Note: Currently both styles use fade-out animation)
 - `tabHero.scoreColor`: Color for score text (default: "#4CAF50")
 - `tabHero.enabled`: Enable/disable Tab Hero (default: true)
 
@@ -49,23 +48,19 @@ You can customize Tab Hero through VS Code settings:
 ## Development
 
 ```bash
-# Install dependencies
 npm install
 
-# Compile TypeScript
 npm run compile
 
-# Watch for changes
+# or watch
 npm run watch
 ```
 
 ## Building for Distribution
 
 ```bash
-# Install vsce if you haven't already
 npm install -g @vscode/vsce
 
-# Package the extension
 vsce package
 ```
 
