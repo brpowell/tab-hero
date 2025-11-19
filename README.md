@@ -51,22 +51,8 @@ You can customize Tab Hero through VS Code settings:
 
 1. Clone this repository
 2. Run `npm install` to install dependencies
-3. Run `npm run compile` to build the extension
-4. Press F5 in VS Code to launch a new Extension Development Host
-5. In the new window, accept some tab completions to see the animations!
-
-## Development
-
-```bash
-npm install
-
-npm run compile
-
-# or watch
-npm run watch
-```
-
-
+3. Press F5 in VS Code to launch a new Extension Development Host
+4. In the new window, accept some tab completions to see the animations!
 
 ## License
 

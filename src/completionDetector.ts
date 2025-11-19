@@ -69,7 +69,10 @@ export class CompletionDetector implements vscode.InlineCompletionItemProvider {
 
       const isInsertion = change.range.isEmpty;
 
-      if (isInsertion && insertedText.length > 3) {
+      // Filter out whitespace-only insertions (e.g., pressing Enter to add a newline)
+      const nonWhitespaceLength = insertedText.replace(/\s/g, "").length;
+
+      if (isInsertion && insertedText.length > 3 && nonWhitespaceLength > 3) {
         const startPosition = change.range.start;
 
         const lines = insertedText.split("\n");
