@@ -2,6 +2,13 @@
 
 A pointless VS Code extension that tracks tab completion score with animations and a stats dashboard.
 
+<a href="https://marketplace.visualstudio.com/items?itemName=ponchopowell.tabhero">
+<img src="https://img.shields.io/visual-studio-marketplace/v/ponchopowell.tabhero" />
+</a>
+<a href="https://open-vsx.org/extension/ponchopowell/tabhero">
+<img src="https://img.shields.io/open-vsx/v/ponchopowell/tabhero" />
+</a>
+
 ## Features
 
 - **Score Animations**: See score popups (🎯 +5, 🎯 +100, etc.) when you accept tab completions
@@ -15,6 +22,10 @@ Tab Hero detects when you accept inline completions (tab completions) and displa
 - **Completion length**: Longer completions earn more points
 - **Multi-line bonuses**: Multi-line completions get a 20% bonus
 - **Complexity indicators**: Additional points for code patterns like functions, blocks, arrays, etc.
+
+## Install
+* [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ponchopowell.tabhero)
+* [Open VSX](https://open-vsx.org/extension/ponchopowell/tabhero)
 
 ## Configuration
 
@@ -39,7 +50,7 @@ You can customize Tab Hero through VS Code settings:
 - `tabHero.showInlineScoreAnimation`: Enable/disable inline score animations (default: true)
 - `tabHero.enabled`: Enable/disable Tab Hero (default: true)
 
-## Installation
+## Develop
 
 1. Clone this repository
 2. Run `npm install` to install dependencies
