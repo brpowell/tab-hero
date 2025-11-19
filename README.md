@@ -2,9 +2,6 @@
 
 A pointless VS Code extension that tracks tab completion score with animations and a stats dashboard.
 
-<a href="https://marketplace.visualstudio.com/items?itemName=ponchopowell.tabhero">
-<img src="https://img.shields.io/visual-studio-marketplace/v/ponchopowell.tabhero" />
-</a>
 <a href="https://open-vsx.org/extension/ponchopowell/tabhero">
 <img src="https://img.shields.io/open-vsx/v/ponchopowell/tabhero" />
 </a>
