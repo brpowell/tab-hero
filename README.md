@@ -14,11 +14,13 @@ A pointless VS Code extension that tracks tab completion score with animations a
 
 ## How It Works
 
-Tab Hero detects when you accept inline completions (tab completions) and displays an animated score value at the cursor position. The score is calculated based on:
+Tab Hero detects when you accept inline completions and displays an animated score value at the cursor position. The score is calculated based on:
 
 - **Completion length**: Longer completions earn more points
 - **Multi-line bonuses**: Multi-line completions get a 20% bonus
 - **Complexity indicators**: Additional points for code patterns like functions, blocks, arrays, etc.
+
+> ℹ️ While vendors such as [Cursor](https://cursor.com) work, some of the more advanced replacement suggestions cannot be accounted for. This is due to detection being done by hooking into the VS Code inline completion provider.
 
 ## Install
 * [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ponchopowell.tabhero)
