@@ -61,6 +61,16 @@ export class CompletionDetector implements vscode.InlineCompletionItemProvider {
       return;
     }
 
+    // Exclude undo/redo operations
+    if (
+      e.reason === vscode.TextDocumentChangeReason.Undo ||
+      e.reason === vscode.TextDocumentChangeReason.Redo
+    ) {
+      this.lastDocumentVersion.set(docKey, e.document.version);
+      this.lastDocumentText.set(docKey, e.document.getText());
+      return;
+    }
+
     const changes = e.contentChanges.filter((change) => change.text.length > 0);
 
     if (changes.length === 1) {
